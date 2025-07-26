@@ -1,4 +1,4 @@
-/* Include CryptoJS via CDN in production */
+// CryptoJS is loaded via CDN in index.html
 function encryptPdf(pdfBase64, key) {
   return CryptoJS.AES.encrypt(pdfBase64, key).toString();
 }
