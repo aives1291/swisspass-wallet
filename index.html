@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Offline Cards</title>
+</head>
+<body>
+  <div class="app-header">
+    <h1>OFFLINE CARDS</h1>
+    <span class="lock-icon">🔒</span>
+  </div>
+  <div class="card-list">
+    <div class="card" onclick="viewPdf('passport')">
+      <img src="img/passport_thumb.png" alt="Pass"/>
+      <span>PASS</span>
+    </div>
+    <div class="card" onclick="viewPdf('id')">
+      <img src="img/id_thumb.png" alt="ID"/>
+      <span>ID</span>
+    </div>
+    <div class="card" onclick="viewPdf('license')">
+      <img src="img/license_thumb.png" alt="Führerschein"/>
+      <span>FÜHRERSCHEIN</span>
+    </div>
+  </div>
+  <script src="crypto.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
