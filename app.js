@@ -1,8 +1,11 @@
-const key = 'geheim123';
+// encryptionKey is provided via config.js
 function viewPdf(type) {
   const encrypted = localStorage.getItem(type);
   if (!encrypted) return alert("Kein PDF vorhanden");
-  const decryptedBase64 = decryptPdf(encrypted, key);
+  if (typeof encryptionKey === 'undefined') {
+    return alert('Verschlüsselungsschlüssel fehlt');
+  }
+  const decryptedBase64 = decryptPdf(encrypted, encryptionKey);
   const blob = base64ToBlob(decryptedBase64, 'application/pdf');
   const url = URL.createObjectURL(blob);
   window.open(url);
