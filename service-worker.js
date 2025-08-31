@@ -1,11 +1,9 @@
-const CACHE_NAME = 'offline-id-cache-v1';
+const CACHE_NAME = 'offline-pdf-cache-v1';
 const FILES_TO_CACHE = [
   '/',
   '/index.html',
   '/style.css',
   '/app.js',
-  '/crypto.js',
-  '/config.js',
   '/manifest.json',
   '/img/passport_thumb.png',
   '/img/id_thumb.png',
