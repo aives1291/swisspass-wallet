@@ -13,7 +13,11 @@ Diese App dient zur Offline-Speicherung und Vorschau von Schweizer Ausweisen (Pa
 2. `.htaccess` und `.htpasswd` anlegen, um Basic Auth zu aktivieren
 3. Apache starten / neu laden
 4. Aufrufen via `http://localhost/offline-id-wallet`
+5. Apache online verfügbar machen
+6. HTTPS und Zertifikat einrichten
+7. DNS einrichten
+8. Apache starten / neu laden
 
-## 📲 Als PWA installieren
+## 📲 Als App installieren
 ### iOS: Safari > Teilen > Zum Home-Bildschirm
 ### Android: Chrome > "App installieren"
