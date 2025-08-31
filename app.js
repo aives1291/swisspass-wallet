@@ -6,7 +6,11 @@ async function viewPdf(type) {
       if (!response.ok) throw new Error('PDF not found');
       const blob = await response.blob();
       pdfBase64 = await blobToBase64(blob);
-      localStorage.setItem(type, pdfBase64);
+      try {
+        localStorage.setItem(type, pdfBase64);
+      } catch (storageErr) {
+        console.warn('Speicher für PDFs ist voll, lade ohne Zwischenspeicherung.', storageErr);
+      }
     } catch (err) {
       console.error(`Fehler beim Laden von ${type}.pdf`, err);
       return alert("Kein PDF vorhanden");
